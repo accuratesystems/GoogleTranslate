@@ -26,7 +26,6 @@ sql.connect(config,function(err){
         }
         console.log(recordset);
     });
-
         
 });
 

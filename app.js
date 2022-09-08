@@ -22,7 +22,7 @@ function traducir(){
     });
 }
 
-//traducir();
+traducir();
 
 
 //#endregion
