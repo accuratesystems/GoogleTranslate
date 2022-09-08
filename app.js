@@ -1,15 +1,6 @@
-var msg = 'Hello World';
-console.log(msg);
-
-// const translate = require('google-translate-api');
-// translate('Hola Soy yo',{to: 'en'}).then( res =>{
-//     console.log(res.text);
-// }).catch( err =>{
-//     console.log(err);
-// });
-
-
 //#region TRADUCIR TEXTO
+
+const { readFile } = require('fs');
 
 const projectId = {
     key : 'AIzaSyDJZThlBK_zDvHOAjKMTi0EawAtS0quQfE'
@@ -22,12 +13,17 @@ function traducir(){
     const target = 'es';
     translate.translate(text,target).then(data=>{
         console.log(data);
+
     }).catch(err=>{
         console.log(err);
     });
 }
 
-traducir();
+//traducir();
+
+const GestionFicheroCaracteres  = require('./readfile');
+var a = new GestionFicheroCaracteres();
+a.incrementaCaracteres(100);
 
 //#endregion
 

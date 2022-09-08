@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@google-cloud/translate": "^7.0.2",
+    "mssql": "^9.0.1"
+  }
+}
