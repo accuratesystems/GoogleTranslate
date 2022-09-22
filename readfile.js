@@ -36,14 +36,14 @@ class GestionFicheroCaracteres {
                 return;
             }
 
-            let total = caracteresActuales+incremento;
+            let total = caracteresActuales + incremento;
             let buffer = new Buffer.from(total.toString(),'utf-8');
             fs.write(fd,buffer,0,buffer.length,0,function(err,writtenBytes){
                 if(err){
                     console.error(err);
                     return;
                 }else{
-                    console.log(writtenBytes + ' caracteres añadidos al fichero');
+                    console.log(`${incremento} caracteres añadidos al fichero`);
                 }
             });
 
